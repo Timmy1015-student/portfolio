@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專案內容</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root{
+            --bg2: rgb(165, 249, 187);   /* 淡綠 */
+            --bg3: rgb(251, 172, 234);   /* 淡紅粉 */
+        }
+        body {
+            font-family: 'Segoe UI', '微軟正黑體', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('assets/64ffaa8061d3643b563785e95f040705.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container { display: flex; min-height: 100vh; }
+
+        /* 側邊欄 */
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0;
+            height: 100vh;
+            z-index: 10;
+            background: rgba(234,241,251,0.85);
+            width: 220px;
+            padding: 24px 0 16px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top-right-radius: 18px;
+            border-bottom-right-radius: 18px;
+            overflow-y: auto;
+        }
+        .sidebar h3 {
+            width: 180px;
+            margin: 0 0 10px 0;
+            font-size: 1.05rem;
+            color: #2d5be3;
+            font-weight: bold;
+        }
+        /* 分組底色 */
+        .sidebar .group{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+        .sidebar .group.projects { background: var(--bg2); }  /* 淡綠 */
+        .sidebar .group.research { background: var(--bg3); }  /* 淡紅粉 */
+
+        .sidebar a {
+            display: block;
+            width: 180px;
+            padding: 10px 16px;
+            margin-bottom: 10px;
+            color: #222;
+            background: #eaf1fb;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s;
+            text-align: left;
+        }
+        .sidebar a.active, .sidebar a:hover {
+            background: #d0e3fa;
+            font-weight: bold;
+        }
+
+        /* 主內容 */
+        .main-content {
+            margin-left: 250px;
+            flex: 1;
+            padding: 48px 40px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 18px;
+            min-height: 400px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+        }
+        .top-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        .home-btn {
+            background: #2d5be3;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 18px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 18px;
+            transition: background 0.2s;
+        }
+        .home-btn:hover { background: #1e00ff; }
+
+        /* RWD */
+        @media (max-width: 900px) {
+            .container { flex-direction: column; }
+            .sidebar {
+                position: static;
+                width: 100vw; height: auto;
+                flex-direction: row;
+                justify-content: flex-start;
+                border-radius: 0;
+                padding: 12px 10px;
+                gap: 10px;
+                overflow-x: auto;
+            }
+            .sidebar .group { width: auto; align-items: flex-start; margin: 0 10px 0 0; }
+            .sidebar a { width: 220px; white-space: nowrap; }
+            .main-content { margin: 12px; padding: 24px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左側分組選單 -->
+        <nav class="sidebar">
+            <div class="group projects">
+                <h3>專案選單</h3>
+                <a href="project.html">日辰資訊公司實習</a>
+                <a href="ai.html">人工智慧概論</a>
+                <a href="dev.html">軟體開發</a>
+                <a href="nodered.html">NODERED網頁建置</a>
+                <a href="menu.html">專題(飲食菜單推薦系統)</a>
+            </div>
+            <div class="group research">
+                <h3>競賽 / 研究</h3>
+                <a href="award.html">競賽成果或獲獎</a>
+                <a href="club.html">大學熱音社</a>
+                <a href="startup.html" class="active">創新創業計劃書及簡報</a>
+                <a href="research.html">研究計畫</a>
+            </div>
+        </nav>
+
+        <!-- 主內容 -->
+        <div class="main-content">
+            <div class="top-bar">
+                <button class="home-btn" onclick="location.href='index.html'">首頁</button>
+                <span style="font-size:1.2rem; font-weight:bold;">創新創業競賽計劃書及簡報</span>
+            </div>
+
+            <div id="pdf-select">
+                <button onclick="showPDF('plan')" style="margin-right:16px; padding:8px 18px; border-radius:8px; border:none; background:#e32d2d; color:#fff; font-size:1rem; cursor:pointer;">計劃書</button>
+                <button onclick="showPDF('ppt')" style="padding:8px 18px; border-radius:8px; border:none; background:#7e01a4; color:#fff; font-size:1rem; cursor:pointer;">簡報</button>
+            </div>
+
+            <div id="pdf-view" style="margin-top:24px; display:none;">
+                <button onclick="hidePDF()" style="margin-bottom:16px; padding:6px 16px; border-radius:8px; border:none; background:#888; color:#fff; font-size:1rem; cursor:pointer;">返回</button>
+                <div id="pdf-frame"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移至最頂/最底按鈕 -->
+    <div style="position: fixed; right: 1px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 30px; z-index: 99;">
+        <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+           style="background:rgba(255, 255, 255, 0.5); color:#fff; border:none; border-radius:8px; padding:10px 18px; font-size:2rem; cursor:pointer;">🔼</button>
+        <button onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})"
+            style="background:rgba(255, 255, 255, 0.5); color:#fff; border:none; border-radius:8px; padding:10px 18px; font-size:2rem; cursor:pointer;">🔽</button>
+    </div>
+
+    <script>
+        function showPDF(type) {
+            document.getElementById('pdf-select').style.display = 'none';
+            document.getElementById('pdf-view').style.display = 'block';
+            let src = '';
+            let title = '';
+            if (type === 'plan') {
+                src = 'assets/《中山醫學大學-得來Food》.docx.pdf';
+                title = '計劃書';
+            } else {
+                src = 'assets/《得來FOOD》賴慶祥、沈祐成.pptx (1).pdf';
+                title = '簡報';
+            }
+            document.getElementById('pdf-frame').innerHTML =
+                `<h3 style="margin-top:0;">${title}</h3>
+                 <iframe src="${src}" width="100%" height="800px" style="border:none;"></iframe>`;
+        }
+        function hidePDF() {
+            document.getElementById('pdf-select').style.display = 'block';
+            document.getElementById('pdf-view').style.display = 'none';
+            document.getElementById('pdf-frame').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

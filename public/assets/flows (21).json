@@ -1,0 +1,845 @@
+[
+    {
+        "id": "63fa0bf61053c932",
+        "type": "tab",
+        "label": "顏色顯示器",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6e8bf53737f5dad4",
+        "type": "tab",
+        "label": "色盲科普區",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "89f11fcea71eac2f",
+        "type": "tab",
+        "label": "色弱測試",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "06bf12c09ce88dd7",
+        "type": "tab",
+        "label": "影片區",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c2ba8e6b6c6e4e20",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#f4ff57",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#8000ff",
+                "baseFont": "Trebuchet MS,Helvetica,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#8000ff",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#8000ff",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#c800ff",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#a48e9d",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "Trebuchet MS,Helvetica,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b99572eae6badcc8",
+        "type": "global-config",
+        "name": "global-config",
+        "env": []
+    },
+    {
+        "id": "f50199f1ebcbff57",
+        "type": "ui_tab",
+        "name": "顏色顯示器",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6528e34d0910ba57",
+        "type": "ui_group",
+        "name": "畫像",
+        "tab": "f50199f1ebcbff57",
+        "order": 1,
+        "disp": true,
+        "width": 14,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ca86e682664cb2bd",
+        "type": "ui_group",
+        "name": "顏色詳細訊息",
+        "tab": "f50199f1ebcbff57",
+        "order": 2,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "color_history_group",
+        "type": "ui_group",
+        "name": "顏色歷史紀錄",
+        "tab": "f50199f1ebcbff57",
+        "order": 3,
+        "disp": true,
+        "width": 21,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "testTab",
+        "type": "ui_tab",
+        "name": "色弱測試",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "testGroup",
+        "type": "ui_group",
+        "name": "色盲檢查",
+        "tab": "testTab",
+        "order": 1,
+        "disp": true,
+        "width": 21,
+        "collapse": false
+    },
+    {
+        "id": "b0c5f43b36d6b2ca",
+        "type": "ui_tab",
+        "name": "色盲科普區",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3337fee4c97399f8",
+        "type": "ui_group",
+        "name": "介紹和模擬",
+        "tab": "b0c5f43b36d6b2ca",
+        "order": 1,
+        "disp": true,
+        "width": 21,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "efcb6747eb12a039",
+        "type": "ui_tab",
+        "name": "影片區",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e8feb21a74cd8f53",
+        "type": "ui_group",
+        "name": "📺 嵌入 YouTube 影片",
+        "tab": "efcb6747eb12a039",
+        "order": 1,
+        "disp": true,
+        "width": 15,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "62091b07ae4fa80f",
+        "type": "MySQLdatabase",
+        "name": "color_assist_db",
+        "host": "localhost",
+        "port": "3306",
+        "db": "color_assist",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "fde126ad9c6514a4",
+        "type": "ui_template",
+        "z": "63fa0bf61053c932",
+        "group": "6528e34d0910ba57",
+        "name": "Image Selector",
+        "order": 1,
+        "width": 3,
+        "height": 12,
+        "format": "<div> <img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8hzYdba7aZdreqUpgpRlw9VlkNBETRjJvXA&s\" class=\"thumbnail\" onclick=\"showImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8hzYdba7aZdreqUpgpRlw9VlkNBETRjJvXA&s')\">\n    <img src=\"https://4.bp.blogspot.com/_gHeT8xDl47A/SgFaCXHb1FI/AAAAAAAAAhA/taZH6NADKeA/s400/Vincent-Van-Gogh-001.jpg\" class=\"thumbnail\" onclick=\"showImage('https://4.bp.blogspot.com/_gHeT8xDl47A/SgFaCXHb1FI/AAAAAAAAAhA/taZH6NADKeA/s400/Vincent-Van-Gogh-001.jpg')\">\n    <img src=\"https://i.ytimg.com/vi/rboiHxBqdZk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCJOJvdjL5IbIseF3W_OJc7U6upSw\" class=\"thumbnail\" onclick=\"showImage('https://i.ytimg.com/vi/rboiHxBqdZk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCJOJvdjL5IbIseF3W_OJc7U6upSw')\">\n    <img src=\"https://media.tenor.com/UPhAUsA9UGkAAAAM/huh-cat-huh-m4rtin.gif\"class=\"thumbnail\" onclick=\"showImage('https://media.tenor.com/UPhAUsA9UGkAAAAM/huh-cat-huh-m4rtin.gif')\">\n    <img src=\"https://media1.tenor.com/m/7Iy--Rz9VgkAAAAC/gangsta-battle.gif\"class=\"thumbnail\" onclick=\"showImage('https://media1.tenor.com/m/7Iy--Rz9VgkAAAAC/gangsta-battle.gif')\">\n    <img src=\"https://media.tenor.com/Gguc4M-cjcEAAAAM/colors.gif\"class=\"thumbnail\" onclick=\"showImage('https://media.tenor.com/Gguc4M-cjcEAAAAM/colors.gif')\">\n</div>\n<script>\n    function showImage(url) {         document.getElementById('fullImage').src = url;         document.getElementById('fullImageContainer').style.display = 'block';     } \n</script>\n\n\n<style>\n    .thumbnail {\n        width: 100px;\n        cursor: pointer;\n        margin: 5px;\n    }\nbody {\nbackground-image: url('https://media1.tenor.com/m/aM_jvlV8LogAAAAd/idk-wallpaper.gif');\nbackground-size: cover; /* 覆蓋整個畫面 */\nbackground-position: center; /* 圖片置中 */\nbackground-repeat: no-repeat; /* 不重複 */\nbackground-attachment: fixed; /* 固定背景，不隨滾動 */\n}\n    #fullImageContainer {\n        display: none;\n        position: relative;\n    }\n\n    #fullImage {\n        max-width: 100%;\n        cursor: crosshair;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc9f1fd5a08c26b8",
+        "type": "ui_template",
+        "z": "63fa0bf61053c932",
+        "group": "ca86e682664cb2bd",
+        "name": "顏色名稱",
+        "order": 1,
+        "width": 7,
+        "height": 12,
+        "format": "<!-- 顏色詳細訊息區 -->\n<div id=\"colorDetailBox\">\n  <div id=\"colorDisplay\"></div>\n  <p> 🖌 顏色: <span id=\"colorText\">最接近: </span>\n    <span id=\"colorName\">加載中...</span>\n  </p>\n</div>\n\n<!-- 替代 loading.html -->\n<div id=\"customLoading\" style=\"display: none; text-align: center; padding: 20px; font-size: 18px; font-weight: bold;\">\n  🔄 資料載入中，請稍候...\n</div>\n\n<!-- 縮圖 -->\n<img src=\"https://ithelp.ithome.com.tw/upload/images/20190925/20120833scwM7XX4ul.png\"\n     class=\"thumbnail\"\n     onclick=\"showFullImage(this)\"\n     style=\"width: 350px; height: auto; cursor: pointer; transition: transform 0.3s ease-in-out;\">\n\n<!-- 放大圖片的容器 -->\n<div id=\"imageModal\" class=\"modal\" onclick=\"closeModal()\">\n  <img id=\"modalImage\" class=\"modal-content\">\n</div>\n\n<style>\n  /* 🔲 模態視窗（**修正：開啟前不影響頁面操作**） */\n  .modal {\n    display: none;\n    position: fixed;\n    z-index: 1000;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(255, 255, 255, 0.2);\n    /* ✅ **修正：淡淡背景，非黑屏** */\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0;\n    /* 🔥 **修正：不會一開始影響頁面** */\n    transition: opacity 0.3s ease-in-out;\n    pointer-events: none;\n    /* 🚀 **修正：未開啟時不影響滑鼠點擊** */\n  }\n\n  /* 🖼️ 放大圖片樣式 */\n  .modal-content {\n    max-width: 100%;\n    max-height: 100%;\n    transform: scale(1);\n    /* 初始大小 */\n    transition: transform 0.3s ease-in-out;\n    cursor: pointer;\n  }\n</style>\n\n<script>\n  function showFullImage(imgElement) {\n    var modal = document.getElementById(\"imageModal\");\n    var modalImg = document.getElementById(\"modalImage\");\n\n    modal.style.display = \"flex\"; // 顯示模態視窗\n    modal.style.opacity = \"1\"; // 淡入效果\n    modal.style.pointerEvents = \"auto\"; // 開啟可點擊\n    modalImg.src = imgElement.src; // 設定圖片來源\n    modalImg.style.transform = \"scale(1)\"; // ✅ 放大 1.2 倍\n}\n\nfunction closeModal() {\n    var modal = document.getElementById(\"imageModal\");\n    modal.style.opacity = \"0\"; // 淡出效果\n    modal.style.pointerEvents = \"none\"; // 關閉點擊\n    setTimeout(() => {\n        modal.style.display = \"none\"; // 真正隱藏視窗\n    }, 300); // **等待動畫結束後隱藏**\n}\n</script>\n\n<script>\n  // 🔄 監聽畫面載入\ndocument.addEventListener(\"nodeRedMsg\", function(event) {\nvar colorData = event.detail.payload;\n\nconsole.log(\"🎨 確認收到數據:\", colorData);\n\nif (!colorData || !colorData.hex) {\nconsole.error(\"❌ 顏色數據異常\", colorData);\nreturn;\n}\n\nvar colorNameElem = document.getElementById(\"colorName\");\nvar colorDisplayElem = document.getElementById(\"colorDisplay\");\nvar colorDetailBoxElem = document.getElementById(\"colorDetailBox\");\n\nif (!colorNameElem || !colorDisplayElem || !colorDetailBoxElem) {\nconsole.error(\"❌ 找不到顏色顯示的 HTML 元素！\");\nreturn;\n}\n\nvar colorName = colorData.colorName ? colorData.colorName.replace(\"最接近: \", \"\") : \"未知顏色\";\nvar hexColor = colorData.hex;\n\nconsole.log(\"✅ 更新 UI:\", { colorName, hexColor });\n\n// **更新 UI 顏色資訊**\ncolorNameElem.textContent = colorName;\ncolorNameElem.style.color = \"red\"; // 讓顏色名稱變紅\ncolorDisplayElem.style.backgroundColor = hexColor;\ncolorDisplayElem.style.borderColor = \"#444\"; // 固定深色邊框\ncolorDetailBoxElem.style.boxShadow = `0 12px 24px ${hexColor}80`;\n\nconsole.log(\"✅ UI 更新完成！\");\n});\n</script>\n\n<style>\n  /* **讓框框更大、更氣派** */\n  #colorDetailBox {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    width: 300px;\n    padding: 20px;\n    font-size: 26px;\n    font-weight: bold;\n    text-align: center;\n    border-radius: 16px;\n    background: #fff;\n    border: 3px solid #ccc;\n    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);\n    transition: all 0.3s ease-in-out;\n  }\n\n  /* **顏色顯示框變更大** */\n  #colorDisplay {\n    width: 100px;\n    height: 100px;\n    border-radius: 12px;\n    border: 3px solid #444;\n    margin-bottom: 12px;\n    transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;\n  }\n\n  /* **固定「最接近:」這段文字為黑色** */\n  #colorText {\n    color: #000000;\n    font-size: 28px;\n  }\n\n  /* **讓顏色名稱變成紅色且更大** */\n  #colorName {\n    font-weight: bold;\n    color: red;\n    font-size: 30px;\n  }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 200,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "289b24427bd3a8ec",
+        "type": "ui_template",
+        "z": "63fa0bf61053c932",
+        "group": "6528e34d0910ba57",
+        "name": "Full Image Display",
+        "order": 2,
+        "width": 11,
+        "height": 12,
+        "format": "<div id=\"welcomeScreen\">\n    <h1>🎨 歡迎使用色盲輔助系統</h1>\n    <button onclick=\"goToColorScreen()\">進入</button>\n</div>\n<!-- 🎨 顏色檢測區域（預設隱藏） -->\n<div id=\"colorScreen\" style=\"display: none;\">\n    <!-- 新增圖片上傳區 -->\n    <div id=\"imageUploadContainer\">\n        <input type=\"file\" id=\"imageUploader\" accept=\"image/*\">\n    </div>\n\n    <div id=\"fullImageContainer\">\n        <div id=\"colorInfo\">點擊圖片來獲取顏色資訊...</div>\n        <div id=\"imageFrame\">\n            <img id=\"fullImage\" crossorigin=\"anonymous\" onclick=\"getPixelColor(event)\" src=\"\" alt=\"請選擇圖片\">\n        </div>\n    </div>\n</div>\n\n<script>\n    // 🎉 點擊按鈕後顯示顏色檢測畫面\n    function goToColorScreen() {\n        document.getElementById(\"welcomeScreen\").style.opacity = \"0\"; // 淡出動畫\n        setTimeout(() => {\n            document.getElementById(\"welcomeScreen\").style.display = \"none\"; // 隱藏畫面\n            document.getElementById(\"colorScreen\").style.display = \"block\"; // 顯示顏色檢測\n        }, 1500); // 1.5 秒後隱藏畫面\n    }\n</script>\n<script>\n    // 🎉 點擊按鈕後顯示顏色檢測畫面\n    function goToColorScreen() {\n    document.getElementById(\"welcomeScreen\").style.display = \"none\";\n    document.getElementById(\"colorScreen\").style.display = \"block\";\n    }\n    // 🔄 定義顏色對應表\nwindow.colorNames = {\n    \"#ff0000\": \"紅色 (Red)\", \"#00ff00\": \"綠色 (Green)\", \"#0000ff\": \"藍色 (Blue)\",\n    \"#ffff00\": \"黃色 (Yellow)\", \"#ff00ff\": \"紫色 (Magenta)\", \"#00ffff\": \"青色 (Cyan)\",\n    \"#ffffff\": \"白色 (White)\", \"#000000\": \"黑色 (Black)\", \"#808080\": \"灰色 (Gray)\",\n    \"#800000\": \"棕色 (Maroon)\", \"#ff4500\": \"橘紅色 (Orange Red)\", \"#008000\": \"深綠色 (Dark Green)\",\n    \"#000080\": \"深藍色 (Navy Blue)\", \"#4b0082\": \"靛藍色 (Indigo)\", \"#9400d3\": \"深紫色 (Dark Violet)\",\n    \"#a52a2a\": \"褐色 (Brown)\", \"#d2691e\": \"巧克力色 (Chocolate)\", \"#5f9ea0\": \"海藍色 (Cadet Blue)\",\n    \"#7fffd4\": \"淺青色 (Aquamarine)\", \"#4682b4\": \"鋼藍色 (Steel Blue)\", \"#c0c0c0\": \"銀色 (Silver)\",\n    \"#ffdab9\": \"桃色 (Peach)\", \"#b8860b\": \"金黃色 (Dark Goldenrod)\", \"#f4a460\": \"沙棕色 (Sandy Brown)\",\n    \"#9b98b3\": \"薰衣草灰色 (Lavender Gray)\", \"#6a5acd\": \"岩藍色 (Slate Blue)\", \"#7b68ee\": \"中紫藍色 (Medium Slate Blue)\",\n    \"#8a2be2\": \"藍紫色 (Blue Violet)\", \"#9370db\": \"中紫色 (Medium Purple)\"\n};\n\n\n// 📤 監聽圖片上傳事件\ndocument.getElementById(\"imageUploader\").addEventListener(\"change\", function(event) {\n    var file = event.target.files[0]; // 取得上傳的檔案\n    if (file) {\n        var reader = new FileReader();\n        reader.onload = function(e) {\n            document.getElementById(\"fullImage\").src = e.target.result; // 讀取圖片並顯示\n            document.getElementById(\"fullImageContainer\").style.display = 'block'; // 顯示圖片區\n        };\n        reader.readAsDataURL(file);\n    }\n});\n\n\n// 🎨 點擊圖片獲取顏色\nfunction getPixelColor(event) {\n    var img = document.getElementById('fullImage');\n    var canvas = document.createElement('canvas');\n    var ctx = canvas.getContext('2d');\n\n\n    // 確保圖片加載後才執行\n    if (!img.src) {\n        console.error(\"❌ 圖片尚未載入\");\n        return;\n    }\n\n\n    canvas.width = img.naturalWidth;\n    canvas.height = img.naturalHeight;\n    ctx.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight);\n\n\n    var rect = img.getBoundingClientRect();\n    var scaleX = img.naturalWidth / rect.width;\n    var scaleY = img.naturalHeight / rect.height;\n\n\n    var x = Math.floor((event.clientX - rect.left) * scaleX);\n    var y = Math.floor((event.clientY - rect.top) * scaleY);\n    var pixel = ctx.getImageData(x, y, 1, 1).data;\n\n\n    var rgb = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;\n\n\n    // 確保 HEX 碼格式正確（6 位數）\n    var hex = \"#\" + (\"000000\" + ((pixel[0] << 16) | (pixel[1] << 8) | pixel[2]).toString(16)).slice(-6).toLowerCase();\n\n\n    // 查找顏色名稱\n    var colorName = window.colorNames[hex] ? window.colorNames[hex] : `最接近: ${findClosestColor(hex)}`;\n\n\n    // 🛠️ 更新畫面\n    document.getElementById(\"colorInfo\").textContent = `📍 位置: (${x}, ${y}) | 🎨 RGB: ${rgb} | 🎨 HEX: ${hex} | 🖌 顏色: ${colorName}`;\n\n// 📨 發送顏色資訊到 Node-RED 後端\nfetch(\"/color-log\", {\n    method: \"POST\",\n    headers: {\n        \"Content-Type\": \"application/json\"\n    },\n    body: JSON.stringify({ x, y, rgb, hex, colorName })\n});\n    // 📨 發送顏色資訊到 Node-RED\n    var msg = { payload: { x, y, rgb, hex, colorName } };\n    var event = new CustomEvent('nodeRedMsg', { detail: msg });\n    document.dispatchEvent(event);\n}\n\n\n// 🔍 尋找最接近的顏色\nfunction findClosestColor(hex) {\n    var inputRgb = hexToRgb(hex);\n    var closestColor = \"未知顏色\";\n    var minDistance = Infinity;\n\n\n    for (var key in window.colorNames) { // 確保使用 window.colorNames\n        var distance = colorDistance(inputRgb, hexToRgb(key));\n        if (distance < minDistance) {\n            minDistance = distance;\n            closestColor = window.colorNames[key];\n        }\n    }\n    return closestColor;\n}\n\n\n// HEX 轉換成 RGB\nfunction hexToRgb(hex) {\n    return [\n        parseInt(hex.substring(1, 3), 16),\n        parseInt(hex.substring(3, 5), 16),\n        parseInt(hex.substring(5, 7), 16)\n    ];\n}\n\n\n// 計算顏色距離\nfunction colorDistance(rgb1, rgb2) {\n    return Math.sqrt(\n        Math.pow(rgb1[0] - rgb2[0], 2) +\n        Math.pow(rgb1[1] - rgb2[1], 2) +\n        Math.pow(rgb1[2] - rgb2[2], 2)\n    );\n}\n\n\n</script>\n\n\n<style>\n\n    #welcomeScreen {\n        position: fixed;\n        top: 0;\n        left: 0;\n        width: 100vw;\n        height: 100vh;\n        background: url('https://media1.tenor.com/m/HatMdEPPjx0AAAAC/galaxy.gif') no-repeat center center;\n        background-size: cover;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: center;\n        /* 🟢 讓所有內容置中 */\n        transition: opacity 0.5s ease-in-out;\n        z-index: 99999;\n        /* 確保在最上層 */\n    }\n\n\n    /* 🎨 標題字體放大，移除任何框框 */\n    #welcomeScreen h1 {\n        font-size: 80px;\n        /* 更大 */\n        font-weight: bold;\n        color: white;\n        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);\n        margin-bottom: 20px;\n        /* 🟢 給按鈕一點空間 */\n    }\n\n\n    /* ✅ 按鈕樣式放大，顏色更顯眼 */\n    button {\n        padding: 20px 40px;\n        font-size: 40px;\n        cursor: pointer;\n        background-color: #ff9800;\n        color: white;\n        border: none;\n        border-radius: 12px;\n        transition: 0.3s;\n        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);\n    }\n\n\n    button:hover {\n        background-color: #e68900;\n        transform: scale(1.1);\n    }\n\n/* 🚀 防止 Node-RED Dashboard 影響畫面 */\nbody, html {\noverflow: hidden !important; /* 防止滾動 */\nheight: 100%;\nmargin: 0;\npadding: 0;\n}\n    /* 📂 圖片上傳區 */\n    #imageUploadContainer {\n        text-align: center;\n        margin-bottom: 15px;\n    }\n\n\n    #imageUploader {\n        padding: 8px;\n        font-size: 16px;\n    }\n\n\n    /* 🖼️ 圖片顯示區 */\n    #fullImageContainer {\n        display: none;\n        position: relative;\n        text-align: center;\n        margin-top: 20px;\n    }\n\n\n    /* 🖼️ 博物館風格金色相框 */\n    #imageFrame {\n        display: inline-block;\n        padding: 12px;\n        background-color: #f5deb3;\n        border: 15px solid #b8860b;\n        border-radius: 8px;\n        box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.4),\n            0 5px 10px rgba(0, 0, 0, 0.3),\n            0 3px 3px rgba(0, 0, 0, 0.2);\n        max-width: fit-content;\n        max-height: fit-content;\n    }\n\n\n    /* 🖼️ 確保圖片與相框同步放大 */\n    #fullImage {\n        width: 100%;\n        height: auto;\n        object-fit: contain;\n        cursor: crosshair;\n        transition: transform 0.3s ease-in-out;\n    }\n\n\n    /* 🎨 文字維持原本大小 */\n    #colorInfo {\n        margin-top: 10px;\n        font-size: 18px;\n        font-weight: bold;\n        color: #333;\n        text-align: center;\n        transform: none;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 230,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "acafdcde00f63a10",
+        "type": "ui_template",
+        "z": "63fa0bf61053c932",
+        "group": "color_history_group",
+        "name": "顏色歷史紀錄",
+        "order": 1,
+        "width": 21,
+        "height": 10,
+        "format": "<div>\n    <h3>📝 顏色歷史紀錄</h3>\n    <table id=\"colorHistoryTable\" border=\"1\" width=\"100%\">\n        <thead>\n            <tr>\n                <th class=\"history-header\">時間</th>\n                <th class=\"history-header\">顏色</th>\n            </tr>\n        </thead>\n        <tbody id=\"colorHistoryBody\">\n        </tbody>\n    </table>\n</div>\n\n<script>\n\n    // **最多保留 8 筆歷史紀錄**\n    let colorHistory = JSON.parse(localStorage.getItem(\"colorHistory\")) || [];\n    let lastHexValue = \"\";\n\n    // **確保不會重複綁定事件**\n    document.removeEventListener(\"nodeRedMsg\", handleColorUpdate);\n    document.addEventListener(\"nodeRedMsg\", handleColorUpdate, { once: false });\n\n    function handleColorUpdate(event) {\n        event.stopPropagation(); // **防止事件冒泡**\n\n        var colorData = event.detail.payload;\n        if (!colorData || !colorData.hex) {\n            console.error(\"❌ 顏色數據異常\", colorData);\n            return;\n        }\n\n        var now = new Date().toLocaleString();\n        var colorName = colorData.colorName.replace(\"最接近: \", \"\"); // 只取顏色名稱\n        var hexValue = colorData.hex.trim().toLowerCase();\n\n        var tableBody = document.getElementById(\"colorHistoryBody\");\n\n        // **避免連續插入相同的 HEX**\n        if (hexValue === lastHexValue) {\n            console.warn(\"⚠️ 與上一筆顏色相同，不新增:\", hexValue);\n            return;\n        }\n\n        lastHexValue = hexValue; // **更新最新的 HEX 值**\n\n        // **新增顏色紀錄**\n        colorHistory.unshift({ time: now, color: colorName });\n\n        // **每次新增後刪除 2 筆最舊的紀錄**\n        while (colorHistory.length > 8) {\n            colorHistory.pop();\n            if (colorHistory.length > 8) {\n                colorHistory.pop(); // 再刪除一筆\n            }\n        }\n\n        // **更新 localStorage**\n        localStorage.setItem(\"colorHistory\", JSON.stringify(colorHistory));\n\n        // **更新畫面**\n        updateTable();  // 🔹 **確保這裡可以正確調用 updateTable**\n    }\n\n    // **更新表格 UI**\n    function updateTable() {\n        var tableBody = document.getElementById(\"colorHistoryBody\");\n        tableBody.innerHTML = \"\";\n        colorHistory.forEach(entry => {\n            var newRow = document.createElement(\"tr\");\n            newRow.innerHTML = `<td>${entry.time}</td><td>${entry.color}</td>`;\n            tableBody.appendChild(newRow);\n        });\n    }\n\n    // **頁面加載時，自動載入過去的記錄**\n    document.addEventListener(\"DOMContentLoaded\", updateTable);\n</script>\n\n<style>\n    /* 讓表頭「時間」和「顏色」文字為黑色 */\n    .history-header {\n        color: black !important;\n        background-color: #f0f0f0;\n        padding: 8px;\n        text-align: left;\n    }\n\n    /* 確保表格內的字也是黑色 */\n    #colorHistoryTable {\n        border-collapse: collapse;\n        width: 100%;\n    }\n\n    #colorHistoryTable th,\n    #colorHistoryTable td {\n        border: 1px solid #ddd;\n        padding: 8px;\n        color: black;\n    }\n\n    /* 奇數行為藍色，偶數行為橘色 */\n    #colorHistoryTable tbody tr:nth-child(odd) {\n        background-color: #ADD8E6;\n    }\n\n    #colorHistoryTable tbody tr:nth-child(even) {\n        background-color: #FFA07A;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 220,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1f244f637a1dd01",
+        "type": "http in",
+        "z": "63fa0bf61053c932",
+        "name": "接收顏色資料",
+        "url": "/color-log",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "7f2e638d627b51b2",
+                "9b071dfda272a4a2"
+            ]
+        ]
+    },
+    {
+        "id": "9b071dfda272a4a2",
+        "type": "function",
+        "z": "63fa0bf61053c932",
+        "name": "組合 SQL",
+        "func": "const data = msg.payload;\n\nmsg.topic = \"INSERT INTO color_log (timestamp, rgb, hex, color_name) VALUES (NOW(), ?, ?, ?)\";\nmsg.payload = [\n    data.rgb,\n    data.hex,\n    data.colorName\n];\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "ae793ae4fa85be12",
+                "a4dc60f53106e2ab"
+            ]
+        ]
+    },
+    {
+        "id": "ae793ae4fa85be12",
+        "type": "mysql",
+        "z": "63fa0bf61053c932",
+        "mydb": "62091b07ae4fa80f",
+        "name": "MySQL 連線",
+        "x": 510,
+        "y": 400,
+        "wires": [
+            [
+                "8d19f1177692f6a0"
+            ]
+        ]
+    },
+    {
+        "id": "8d19f1177692f6a0",
+        "type": "http response",
+        "z": "63fa0bf61053c932",
+        "name": "回應寫入結果",
+        "statusCode": "",
+        "headers": {},
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a4dc60f53106e2ab",
+        "type": "debug",
+        "z": "63fa0bf61053c932",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7f2e638d627b51b2",
+        "type": "debug",
+        "z": "63fa0bf61053c932",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8fddd4f39c0b29c6",
+        "type": "ui_template",
+        "z": "6e8bf53737f5dad4",
+        "group": "3337fee4c97399f8",
+        "name": "色盲介紹",
+        "order": 1,
+        "width": 16,
+        "height": 12,
+        "format": "<!DOCTYPE html>\n<html lang=\"zh-TW\">\n\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>色盲介紹</title>\n    <style>\n        \n        /* 🌟 顯眼的標題 */\n        .main-title {\n            font-size: 52px;\n            /* 放大字體 */\n            font-weight: bold;\n            background: linear-gradient(to right, #007BFF, #6A0DAD);\n            /* 藍 → 紫  漸層 */\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            text-shadow: 4px 4px 15px rgba(0, 255, 127, 0.6);\n            /* 綠色光暈 */\n            margin-bottom: 20px;\n        }\n\n\n        /* 🌟 按鈕樣式 */\n        .button-container {\n            margin: 20px 0;\n            display: flex;\n            justify-content: center;\n            flex-wrap: wrap;\n        }\n\n\n        /* 🎨 原始漸層按鈕 */\n        .button {\n            background: linear-gradient(to right, #FF6666, #C27CDA, #FFEB70);\n            color: white;\n            padding: 15px 30px;\n            margin: 10px;\n            border: none;\n            border-radius: 30px;\n            cursor: pointer;\n            font-size: 18px;\n            font-weight: bold;\n            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);\n            transition: all 0.3s ease-in-out;\n        }\n\n        /* 🎨 滑鼠懸停時，顏色稍微加深 */\n        .button:hover {\n            transform: scale(1.05);\n            background: linear-gradient(to right, #E65A5A, #B06BC4, #FFD94D);\n        }\n\n\n    /* 🌆 背景設定 */\n    body {\n    background-image: url('https://i.pinimg.com/736x/97/07/56/97075607d7c573c776b7b40a02ebcbb1.jpg');\n    background-size: cover; /* 讓背景填滿畫面 */\n    background-position: center;\n    background-attachment: fixed;\n    background-repeat: no-repeat;\n    overflow: hidden; /* 防止氣球超出範圍 */\n    }\n    \n    /* 🎈 氣球樣式 */\n    .balloon {\n    position: absolute;\n    width: 12px;\n    height: 12px;\n    background-color: red;\n    border-radius: 50%;\n    animation: float 6s linear infinite;\n    cursor: pointer;\n    transition: transform 0.3s ease-out;\n    }\n    \n    /* 🎨 不同顏色的氣球 */\n    .balloon:nth-child(2n) { background-color: #FF6666; }\n    .balloon:nth-child(3n) { background-color: #C27CDA; }\n    .balloon:nth-child(4n) { background-color: #FFEB70; }\n    .balloon:nth-child(5n) { background-color: #66CCFF; }\n    \n    /* 🎈 氣球點擊時的動畫 */\n    @keyframes float {\n    0% { transform: translateY(0px); }\n    100% { transform: translateY(-800px); }\n    }\n    \n    /* 🎨 讓內容區塊有半透明背景，增加可讀性 */\n    .content {\n    background: rgba(255, 255, 255, 0.85); /* ✅ 白色半透明 */\n    backdrop-filter: blur(5px); /* ✅ 模糊效果 (讓背景稍微柔和但不影響清晰度) */\n    padding: 20px;\n    border-radius: 15px;\n    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ✅ 添加陰影，使內容更清晰 */\n    }\n\n\n        /* ✅ show 類別加上時，讓內容顯示 */\n        .content.show {\n            display: block;\n            opacity: 1;\n            transform: translateY(0);\n        }\n\n\n        .content h2 {\n            color: #6A0DAD;\n            border-left: 6px solid #007BFF;\n            padding-left: 15px;\n            font-size: 30px;\n            font-weight: bold;\n            text-shadow: 2px 2px 8px rgba(106, 13, 173, 0.3);\n        }\n\n\n        .content ul {\n            padding-left: 20px;\n        }\n\n\n        .content ul li {\n            font-size: 20px;\n            color: #444;\n            line-height: 1.8;\n            text-align: justify;\n        }\n    </style>\n</head>\n\n\n<body>\n\n    <!-- 🎯 色盲介紹按鈕 -->\n    <div class=\"button-container\">\n        <button class=\"button\" onclick=\"showContent('definition')\">📖 色盲的定義</button>\n        <button class=\"button\" onclick=\"showContent('types')\">🎨 色盲類型</button>\n        <button class=\"button\" onclick=\"showContent('causes')\">🧬 色盲的成因</button>\n        <button class=\"button\" onclick=\"showContent('impact')\">👀 影響與日常</button>\n    </div>\n\n\n    <!-- 📖 色盲的定義 -->\n    <div id=\"definition\" class=\"content\">\n        <h2>📖 色盲的定義</h2>\n        <ul>\n            <li>🧐 <b>色盲（Color Blindness）</b> 是一種 <b>視覺障礙</b>，患者無法正常分辨某些顏色。</li>\n            <li>📌 <b>最常見的類型是紅綠色盲</b>，這類患者難以區分 <span style=\"color: red;\">紅色</span> 與\n                <span style=\"color: green;\">綠色</span>，對交通號誌、食物顏色、服飾搭配可能造成影響。\n            </li>\n            <li> 🔬<b>色盲的形成</b> 與 <b>視網膜中的視錐細胞（Cone Cells）</b> 有關，這些細胞負責感應紅、綠、藍三種基本顏色，當其中一種功能異常時，就會導致色盲。</li>\n            <li> 🧬<b>色盲大多是遺傳性的</b>，通常由 <b>X 染色體上的基因變異</b> 所引起，因此 <b>男性（XY）比女性（XX）更容易患色盲</b>。</li>\n            <li> 💡<b>除了遺傳因素外</b>，某些<b>眼部疾病、老化、頭部外傷或藥物副作用</b> 也可能導致後天性色盲。</li>\n            <li> 🌍<b>色盲的全球統計</b>：\n                <ul>\n                    <li> <b>約 8% 的男性</b>（每 12 人就有 1 人）有某種程度的色盲。</li>\n                    <li> <b>約 0.5% 的女性</b>（每 200 人才有 1 人）患有色盲。</li>\n                    <li> <b>全球約 3 億人</b> 有某種程度的色覺異常。</li>\n                </ul>\n            </li>\n            <li>🔄 <b>色盲無法被治癒，但可以透過</b>：\n                <ul>\n                    <li> <b>色盲濾鏡（Color Blind Glasses）</b> 來改善色覺。</li>\n                    <li> <b>特定應用程式（Colorblind Assist Apps）</b> 幫助辨識顏色。</li>\n                    <li> <b>顏色標註（如標示代號、形狀輔助）</b> 來輔助色盲患者。</li>\n                </ul>\n            </li>\n        </ul>\n    </div>\n\n\n    <!-- 🎨 色盲類型 -->\n    <div id=\"types\" class=\"content\">\n        <h2>🎨 色盲類型</h2>\n        <ul>\n            <li>🔴 <b>紅綠色盲（Red-Green Color Blindness）</b>：\n                <ul>\n                    <li>🚦 **無法清楚分辨** <span style=\"color: red;\">紅色</span> 與 <span style=\"color: green;\">綠色</span>。</li>\n                    <li>👁️ **主要類型**：\n                        <ul>\n                            <li> <b>綠色異常（Deuteranomaly）</b>：綠色看起來像紅色，最常見。</li>\n                            <li> <b>綠色盲（Deuteranopia）</b>：無法辨識綠色。</li>\n                            <li> <b>紅色異常（Protanomaly）</b>：紅色看起來較暗或像綠色。</li>\n                            <li> <b>紅色盲（Protanopia）</b>：無法辨識紅色。</li>\n                        </ul>\n                    </li>\n                    <li>🚦 **影響範圍**：\n                        <ul>\n                            <li> 可能導致 <b>無法正確辨識交通號誌</b>。</li>\n                            <li> 在<b>超市選購蔬菜水果時</b>，可能無法區分成熟與未成熟。</li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n\n            <li>🔵 <b>黃藍色盲（Blue-Yellow Color Blindness）</b>：\n                <ul>\n                    <li>🟡 **無法區分** <span style=\"color: blue;\">藍色</span> 和 <span style=\"color: yellow;\">黃色</span>，較罕見。\n                    </li>\n                    <li>👁️ **主要類型**：\n                        <ul>\n                            <li> <b>藍色異常（Tritanomaly）</b>：藍色與綠色、黃色與紅色容易混淆。</li>\n                            <li> <b>藍色盲（Tritanopia）</b>：無法辨識藍色，視野中藍色區域會變成灰色。</li>\n                        </ul>\n                    </li>\n                    <li>🌈 **影響範圍**：\n                        <ul>\n                            <li> 可能導致 **無法辨識藍天、黃花**。</li>\n                            <li> 可能 **難以解讀彩色圖表、地圖**。</li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n\n            <li>⚫ <b>全色盲（Achromatopsia，全色視覺障礙）</b>：\n                <ul>\n                    <li> **視覺完全沒有顏色，僅能看到黑白灰色**。</li>\n                    <li> **極為罕見，約每 3 萬人中才有 1 人**。</li>\n                    <li> **伴隨其他視力問題**：\n                        <ul>\n                            <li> 對光極度敏感（畏光）。</li>\n                            <li> 需要特殊濾光眼鏡來減少光線刺激。</li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n        </ul>\n    </div>\n\n\n    <!-- 🧬 色盲的成因 -->\n    <div id=\"causes\" class=\"content\">\n        <h2>🧬 色盲的成因</h2>\n        <ul>\n            <li>🧑‍👩‍👦 <b>遺傳因素</b>：\n                <ul>\n                    <li> 大多數色盲是<b>遺傳性的</b>，由 **X 染色體上的基因變異** 所導致。</li>\n                    <li> 男性較女性更容易罹患色盲，因為男性只有 **1 條 X 染色體**，而女性有 **2 條**，其中一條可能補償變異基因。</li>\n                    <li> <b>家族色盲史</b> 會增加遺傳色盲的風險。</li>\n                </ul>\n            </li>\n\n            <li>💊 <b>藥物影響</b>：\n                <ul>\n                    <li>⚕️ 某些藥物可能會影響視網膜或視神經，導致<b>色覺異常</b>。</li>\n                    <li>💊 **可能影響色覺的藥物**：\n                        <ul>\n                            <li> **抗癲癇藥物**（如「醋氮酰胺 Acetazolamide」）</li>\n                            <li> **抗生素**（如「乙胺嘧啶 Ethambutol」，可能影響視神經）</li>\n                            <li> **抗精神病藥**（如「氯丙嗪 Chlorpromazine」）</li>\n                            <li> **治療心血管疾病的藥物**（如「地高辛 Digoxin」可能導致色視覺扭曲）</li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n\n            <li>🧠 <b>疾病導致</b>：\n                <ul>\n                    <li> 一些全身性疾病或眼部疾病可能<b>損害視神經或視網膜</b>，影響色覺。</li>\n                    <li> <b>與色盲相關的疾病：</b>\n                        <ul>\n                            <li> **青光眼**：眼壓過高可能導致視神經受損。</li>\n                            <li> **糖尿病視網膜病變**：高血糖損害視網膜內的感光細胞。</li>\n                            <li> **帕金森氏症**（Parkinson’s disease）：影響腦部處理顏色的能力。</li>\n                            <li> **多發性硬化症（MS）**：影響視神經，使色彩敏感度降低。</li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n\n            <li>🤕 <b>受傷或老化</b>：\n                <ul>\n                    <li> <b>眼部創傷</b>：嚴重的眼外傷可能會損害視網膜或視神經。</li>\n                    <li> <b>年齡增長</b>：隨著年齡增加，視覺系統退化，可能導致色覺敏感度下降。</li>\n                </ul>\n            </li>\n        </ul>\n    </div>\n    <!-- 👀 色盲的影響 -->\n    <div id=\"impact\" class=\"content\">\n        <h2>👀 色盲的影響</h2>\n        <ul>\n            <li>🚦 <b>交通影響</b>：\n                <ul>\n                    <li>🚘 色盲者可能難以<b>辨識紅綠燈</b>，特別是紅綠色盲患者。</li>\n                    <li>🚏 無法區分道路標誌顏色，例如：\n                        <ul>\n                            <li>🔴 **禁止標誌**（紅色）</li>\n                            <li>🟡 **警告標誌**（黃色）</li>\n                            <li>🟢 **指示標誌**（綠色）</li>\n                        </ul>\n                    </li>\n                    <li>🚨 駕駛時<b>難以分辨車輛煞車燈與路燈顏色</b>，增加行車風險。</li>\n                </ul>\n            </li>\n\n\n            <li>🎨 <b>工作限制</b>：\n                <ul>\n                    <li>💼 某些職業對<b>色彩辨識能力有嚴格要求</b>，例如：\n                        <ul>\n                            <li>🛫 **飛行員**（航空公司需要色彩辨識正常）</li>\n                            <li>🚇 **火車與地鐵司機**（辨識信號燈）</li>\n                            <li>🧑‍🔬 **醫療領域**（病理學、外科、藥物辨識）</li>\n                            <li>🖌️ **藝術與設計**（平面設計、服裝設計、數位藝術）</li>\n                            <li>🛠️ **電工**（需要辨識不同顏色的電線）</li>\n                        </ul>\n                    </li>\n                    <li>📌 許多工作場所提供**色盲輔助工具**，如特製濾光眼鏡或標識系統。</li>\n                </ul>\n            </li>\n\n\n            <li>📊 <b>學習挑戰</b>：\n                <ul>\n                    <li>📚 教科書與課堂教學<b>大量使用顏色區分內容</b>，對色盲學生造成困難。</li>\n                    <li>📈 **彩色圖表與地圖**：\n                        <ul>\n                            <li>🔍 無法區分 **地圖顏色**（如藍色 vs 紫色）</li>\n                            <li>📊 **折線圖與長條圖** 常用多種顏色區分不同數據</li>\n                        </ul>\n                    </li>\n                    <li>🎓 考試與學術測試中，若<b>使用顏色作為答案提示</b>，色盲學生可能受影響。</li>\n                </ul>\n            </li>\n\n\n            <li>🛍️ <b>日常生活</b>：\n                <ul>\n                    <li>👕 **購物影響**：\n                        <ul>\n                            <li>👗 無法辨識衣服顏色，購物時可能會<b>選擇錯誤的顏色</b>。</li>\n                            <li>🍎 **食物選擇**：無法區分生熟肉、成熟水果的顏色變化。</li>\n                        </ul>\n                    </li>\n                    <li>🎮 **數位娛樂**：\n                        <ul>\n                            <li>🕹️ **電玩遊戲**：某些遊戲界面使用紅綠區分敵我角色，色盲玩家可能無法準確辨識。</li>\n                            <li>📱 **APP與網站設計**：若缺少色盲友善模式，使用者體驗可能受影響。</li>\n                        </ul>\n                    </li>\n                    <li>🖼️ **社交與文化影響**：\n                        <ul>\n                            <li>🎭 無法辨識<b>化妝或美術作品的細微顏色變化</b>。</li>\n                            <li>🌈 色彩在某些文化中具有象徵意義（如紅色象徵喜慶），色盲者可能無法直覺理解。</li>\n                        </ul>\n                    </li>\n                </ul>\n            </li>\n        </ul>\n    </div>\n\n\n    <script>\n        // 🎈 生成氣球\n        function createBalloon() {\n        const balloon = document.createElement(\"div\");\n        balloon.classList.add(\"balloon\");\n        \n        // 設定隨機位置\n        const randomX = Math.random() * window.innerWidth;\n        const randomDelay = Math.random() * 3;\n        \n        balloon.style.left = `${randomX}px`;\n        balloon.style.bottom = \"-100px\";\n        balloon.style.animationDelay = `${randomDelay}s`;\n        \n        // 點擊時消失\n        balloon.addEventListener(\"click\", () => {\n        balloon.style.transform = \"scale(0)\";\n        setTimeout(() => balloon.remove(), 500);\n        });\n        \n        document.body.appendChild(balloon);\n        \n        // 讓氣球 10 秒後自動移除\n        setTimeout(() => {\n        if (balloon.parentElement) {\n        balloon.remove();\n        }\n        }, 10000);\n        }\n        \n        // 🎈 每 1 秒生成一個氣球\n        setInterval(createBalloon, 2000);\n        function showContent(id) {\n            var contents = document.querySelectorAll('.content');\n            contents.forEach(content => {\n                content.style.display = 'none';\n                content.classList.remove('show');\n            });\n\n\n            var selectedContent = document.getElementById(id);\n            if (selectedContent) {\n                selectedContent.style.display = 'block';\n                setTimeout(() => {\n                    selectedContent.classList.add('show');\n                }, 10);\n            }\n        }\n    </script>\n\n\n</body>\n\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 300,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8bee7678d36fa2eb",
+        "type": "ui_template",
+        "z": "6e8bf53737f5dad4",
+        "group": "3337fee4c97399f8",
+        "name": "色盲模擬",
+        "order": 2,
+        "width": 5,
+        "height": 12,
+        "format": "<!-- 🎭 色盲模擬 -->\n<h2 class=\"simulate-title\">色盲模擬</h2>\n<button class=\"simulate-button\" onclick=\"toggleSimulation()\">🎭 開啟色盲模擬</button>\n\n<!-- 色盲模擬選項 -->\n<div id=\"simulate-options\" class=\"simulate-button-container\" style=\"display: none;\">\n    <button class=\"simulate-button\" onclick=\"simulate('normal')\">✅ 正常視覺</button>\n    <button class=\"simulate-button\" onclick=\"simulate('deuteranopia')\">🟢 紅綠色盲（綠色異常）</button>\n    <button class=\"simulate-button\" onclick=\"simulate('protanopia')\">🔴 紅綠色盲（紅色異常）</button>\n    <button class=\"simulate-button\" onclick=\"simulate('tritanopia')\">🔵 藍黃色盲</button>\n    <button class=\"simulate-button\" onclick=\"simulate('achromatopsia')\">⚫ 全色盲</button>\n</div>\n\n<!-- 🖼️ 色盲測試圖片上傳 -->\n<input type=\"file\" id=\"uploadImage\" accept=\"image/*\">\n<div id=\"image-container\" style=\"display: none;\">\n    <img id=\"testImage\" src=\"https://www.ifreesite.com/color-blindness/image/1-colorblindness.jpg\" alt=\"測試圖片\">\n</div>\n\n<style>\n    /* 🌟 顯眼標題設計 */\n    .simulate-title {\n        font-size: 42px;\n        font-weight: bold;\n        background: linear-gradient(to right, #007BFF, #6A0DAD);\n        /* 藍 → 紫  漸層 */\n        -webkit-background-clip: text;\n        -webkit-text-fill-color: transparent;\n        text-shadow: 4px 4px 15px rgba(0, 255, 127, 0.6);\n        /* 綠色光暈 */\n        text-align: center;\n        margin-bottom: 20px;\n    }\n\n    /* 🎯 色盲模擬專用按鈕樣式 */\n    .simulate-button-container {\n        margin: 20px 0;\n        display: flex;\n        justify-content: center;\n        flex-wrap: wrap;\n    }\n\n    .simulate-button {\n        background: linear-gradient(to right, #7b68ee, #6a5acd);\n        color: white;\n        padding: 15px 30px;\n        margin: 10px;\n        border: none;\n        border-radius: 30px;\n        cursor: pointer;\n        font-size: 18px;\n        font-weight: bold;\n        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);\n        transition: all 0.3s ease-in-out;\n    }\n\n    .simulate-button:hover {\n        transform: scale(1.05);\n        background: linear-gradient(to right, #007BFF, #0056B3);\n    }\n\n    /* 🖼️ 圖片樣式 */\n    img {\n        width: 80%;\n        max-width: 500px;\n        border-radius: 10px;\n        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n    }\n</style>\n\n<script>\n    function toggleSimulation() {\n        var options = document.getElementById('simulate-options');\n        options.style.display = (options.style.display === 'block') ? 'none' : 'block';\n    }\n\n    document.getElementById('uploadImage').addEventListener('change', function(event) {\n        var reader = new FileReader();\n        reader.onload = function() {\n            var img = document.getElementById('testImage');\n            img.src = reader.result;\n            document.getElementById('image-container').style.display = 'block';\n        }\n        reader.readAsDataURL(event.target.files[0]);\n    });\n\n    function simulate(type) {\n        var body = document.body;\n        var img = document.getElementById('testImage');\n\n        switch (type) {\n            case 'normal':\n                body.style.filter = 'none';\n                img.style.filter = 'none';\n                break;\n            case 'deuteranopia':\n                body.style.filter = 'sepia(80%) hue-rotate(30deg) saturate(70%)';\n                img.style.filter = 'sepia(80%) hue-rotate(30deg) saturate(70%)';\n                break;\n            case 'protanopia':\n                body.style.filter = 'sepia(80%) hue-rotate(-30deg) saturate(70%)';\n                img.style.filter = 'sepia(80%) hue-rotate(-30deg) saturate(70%)';\n                break;\n            case 'tritanopia':\n                body.style.filter = 'sepia(100%) hue-rotate(90deg) saturate(50%)';\n                img.style.filter = 'sepia(100%) hue-rotate(90deg) saturate(50%)';\n                break;\n            case 'achromatopsia':\n                body.style.filter = 'grayscale(100%)';\n                img.style.filter = 'grayscale(100%)';\n                break;\n        }\n    }\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 300,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bb6dbe97f8232f6",
+        "type": "ui_button",
+        "z": "89f11fcea71eac2f",
+        "name": "開始測試",
+        "group": "testGroup",
+        "order": 1,
+        "width": 6,
+        "height": 2,
+        "passthru": false,
+        "label": "開始測試 (共 8 題)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-play",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "3f8a40aadd00b6ba"
+            ]
+        ]
+    },
+    {
+        "id": "3f8a40aadd00b6ba",
+        "type": "function",
+        "z": "89f11fcea71eac2f",
+        "name": "選擇隨機圖片",
+        "func": "var images = [\n    { url: \"https://www.ifreesite.com/color-blindness/image/1-colorblindness.jpg\", answer: \"628\", options: [\"628\", \"638\", \"828\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/9-colorblindness.jpg\", answer: \"869\", options: [\"889\", \"869\", \"899\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/10-colorblindness.jpg\", answer: \"809\", options: [\"808\", \"809\", \"909\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/2-colorblindness.jpg\", answer: \"圓形\", options: [\"圓形\", \"三角形\", \"五角星\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/4-colorblindness.jpg\", answer: \"燕子\", options: [\"蜜蜂\", \"蟑螂\", \"燕子\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/6-colorblindness.jpg\", answer: \"鵝\", options: [\"雞\", \"鵝\", \"蛇\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/16-colorblindness.jpg\", answer: \"熊貓\", options: [\"台灣黑熊\", \"維尼\", \"熊貓\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/14-colorblindness.jpg\", answer: \"山羚羊\", options: [\"喜洋洋\", \"綿羊\", \"山羚羊\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/12-colorblindness.jpg\", answer: \"馬\", options: [\"鹿\", \"馬\", \"企鵝\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/13-colorblindness.jpg\", answer: \"車車\", options: [\"車車\", \"房子\", \"椅子\"] },\n    { url: \"https://www.ifreesite.com/color-blindness/image/29-colorblindness.jpg\", answer: \"金魚\", options: [\"金魚\", \"精子\", \"蝌蚪\"] }\n];\n\nvar trigger = msg.payload;\nvar questionCount = flow.get(\"questionCount\") || 0;\nvar testStarted = flow.get(\"testStarted\") || false;\n\nif (trigger === \"start\") {\n    flow.set(\"questionCount\", 0);\n    flow.set(\"score\", 0);\n    flow.set(\"testStarted\", true);\n    flow.set(\"waitingForAnswer\", false);\n    questionCount = 0;\n}\n\ntestStarted = flow.get(\"testStarted\");\nif (!testStarted) return null;\nif (questionCount >= 8) return null;\nif (flow.get(\"waitingForAnswer\")) return null;\n\nvar randomIndex = Math.floor(Math.random() * images.length);\nvar selectedImage = images[randomIndex];\n\nflow.set(\"currentAnswer\", selectedImage.answer);\nflow.set(\"currentOptions\", selectedImage.options);\nflow.set(\"questionCount\", questionCount );\nflow.set(\"waitingForAnswer\", true);\n\nmsg.payload = {\n    url: selectedImage.url,\n    options: selectedImage.options\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "180f685a3358f375"
+            ]
+        ]
+    },
+    {
+        "id": "180f685a3358f375",
+        "type": "ui_template",
+        "z": "89f11fcea71eac2f",
+        "group": "testGroup",
+        "name": "顯示圖片與選項",
+        "order": 2,
+        "width": 10,
+        "height": 10,
+        "format": "<div style=\"text-align: center;\">\n    <h3 style=\"font-size: 26px; font-weight: bold; margin-bottom: 15px;\">請選擇正確答案</h3>\n\n    <!-- 圖片放大 1.2 倍，增加圓角 & 陰影 -->\n    <img ng-if=\"msg.payload.url\" ng-src=\"{{msg.payload.url}}\"\n        style=\"width: 480px; height: auto; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); margin-bottom: 20px;\" />\n\n    <br>\n\n    <!-- 按鈕設計：放大、圓角、不同顏色 -->\n    <button ng-click=\"send({payload: msg.payload.options[0]})\"\n        style=\"font-size: 24px; padding: 15px 30px; margin: 10px; border-radius: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer;\">\n        {{msg.payload.options[0]}}\n    </button>\n\n    <button ng-click=\"send({payload: msg.payload.options[1]})\"\n        style=\"font-size: 24px; padding: 15px 30px; margin: 10px; border-radius: 10px; background-color: #2196F3; color: white; border: none; cursor: pointer;\">\n        {{msg.payload.options[1]}}\n    </button>\n\n    <button ng-click=\"send({payload: msg.payload.options[2]})\"\n        style=\"font-size: 24px; padding: 15px 30px; margin: 10px; border-radius: 10px; background-color: #FF9800; color: white; border: none; cursor: pointer;\">\n        {{msg.payload.options[2]}}\n    </button>\n\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 590,
+        "y": 140,
+        "wires": [
+            [
+                "cd67e1a09771fe53"
+            ]
+        ]
+    },
+    {
+        "id": "cd67e1a09771fe53",
+        "type": "function",
+        "z": "89f11fcea71eac2f",
+        "name": "比對答案",
+        "func": "var score = flow.get(\"score\") || 0;\nvar questionCount = flow.get(\"questionCount\") || 0;\nvar testStarted = flow.get(\"testStarted\") || false;\nvar waitingForAnswer = flow.get(\"waitingForAnswer\") || false;\nvar correctAnswer = flow.get(\"currentAnswer\");\n\nif (!testStarted || !waitingForAnswer) return null;\nif (questionCount >= 8) return null;\nif (!msg.payload || typeof msg.payload !== \"string\") return null;\n\nvar userAnswer = msg.payload.trim();\nvar result = (userAnswer === correctAnswer) ? \"正確\" : \"錯誤\";\n\n// ✅ 顯示訊息\nvar response = {\n    payload: result === \"正確\"\n        ? `<span style='font-size: 24px; font-weight: bold; color: green;'>✅ 給你賽到！   答案：${correctAnswer}</span>`\n        : `<span style='font-size: 24px; font-weight: bold; color: red;'>❌ 動動腦喔！     正確答案：${correctAnswer}</span>`\n};\n\n// ✅ 更新成績與狀態\nif (result === \"正確\") score += 1;\nflow.set(\"score\", score);\nflow.set(\"waitingForAnswer\", false);\n\n// ✅ 顯示進度\nvar progressText = { payload: `已答對：${score} / 8` };\nvar progressGauge = { payload: score };\n\n// ✅ 寫入資料庫\nvar logRecord = {\n    method: \"POST\",\n    url: \"http://127.0.0.1:1880/color-test-log\",\n    headers: { \"Content-Type\": \"application/json\" },\n    payload: {\n        題號: questionCount + 1,\n        使用者答案: userAnswer,\n        正確答案: correctAnswer\n    }\n};\n\n// ✅ 題號 +1 最後處理\nquestionCount += 1;\nflow.set(\"questionCount\", questionCount);\nflow.set(\"waitingForAnswer\", false);\n\n// ✅ 回傳\nif (questionCount < 8) {\n    return [\n        response,                  // 0 顯示訊息\n        { payload: \"next\" },       // 1 下一題\n        progressText,              // 2 顯示進度文字\n        progressGauge,             // 3 顯示圓形圖\n        logRecord                  // 4 寫入資料庫\n    ];\n} else {\n    flow.set(\"testStarted\", false);\n    return [\n        response,                  // 0 顯示訊息\n        { payload: \"evaluate\" },   // 1 顯示結算\n        progressText,              // 2 顯示進度文字\n        progressGauge,             // 3 顯示圓形圖\n        logRecord                  // 4 寫入資料庫\n    ];\n}\n",
+        "outputs": 5,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "5f552b432c70d947"
+            ],
+            [
+                "3f8a40aadd00b6ba"
+            ],
+            [
+                "9f800f30b36ae5d1"
+            ],
+            [
+                "930f08e459057225"
+            ],
+            [
+                "e83d7e123f4cbe45"
+            ]
+        ]
+    },
+    {
+        "id": "5f552b432c70d947",
+        "type": "ui_text",
+        "z": "89f11fcea71eac2f",
+        "group": "testGroup",
+        "order": 4,
+        "width": 6,
+        "height": 4,
+        "name": "顯示訊息",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "30",
+        "color": "#fbff00",
+        "x": 540,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9f800f30b36ae5d1",
+        "type": "ui_text",
+        "z": "89f11fcea71eac2f",
+        "group": "testGroup",
+        "order": 5,
+        "width": 6,
+        "height": 2,
+        "name": "",
+        "label": "題數:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "25",
+        "color": "#ffffff",
+        "x": 530,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "930f08e459057225",
+        "type": "ui_gauge",
+        "z": "89f11fcea71eac2f",
+        "name": "",
+        "group": "testGroup",
+        "order": 3,
+        "width": 5,
+        "height": 10,
+        "gtype": "donut",
+        "title": "顯示答對題數表",
+        "label": "正確題數",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "8",
+        "colors": [
+            "#cdd737",
+            "#00e6cb",
+            "#4dff00"
+        ],
+        "seg1": "3",
+        "seg2": "6",
+        "diff": false,
+        "className": "custom-gauge-label",
+        "x": 560,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a901092e3d154f4d",
+        "type": "ui_template",
+        "z": "89f11fcea71eac2f",
+        "group": "testGroup",
+        "name": "Facebook 分享按鈕",
+        "order": 6,
+        "width": 6,
+        "height": 2,
+        "format": "<div style=\"display: flex; justify-content: center; gap: 10px; margin-top: 20px;\">\n    <!-- Facebook 分享按鈕 -->\n    <button onclick=\"shareToFB()\"\n        style=\"font-size: 20px; padding: 15px; border-radius: 12px; background-color: #1877f2; color: white; \n               border: none; cursor: pointer; font-weight: bold; width: 50%; max-width: 200px;\n               box-shadow: 4px 4px 10px rgba(0,0,0,0.2);\">\n        📢 分享至 Facebook\n    </button>\n\n    <!-- Instagram 分享按鈕 -->\n    <button onclick=\"shareToIG()\"\n        style=\"font-size: 20px; padding: 15px; border-radius: 12px; background-color: #E1306C; color: white; \n               border: none; cursor: pointer; font-weight: bold; width: 50%; max-width: 200px;\n               box-shadow: 4px 4px 10px rgba(0,0,0,0.2);\">\n        📸 分享至 Instagram\n    </button>\n</div>\n\n<script>\n    function shareToFB() {\n        let shareURL = encodeURIComponent(window.location.href);\n        let fbURL = \"https://www.facebook.com/sharer/sharer.php?u=\" + shareURL;\n        window.open(fbURL, \"_blank\");\n    }\n\n    function shareToIG() {\n        let shareURL = encodeURIComponent(window.location.href);\n        let igURL = \"https://www.instagram.com/?url=\" + shareURL;\n        window.open(igURL, \"_blank\");\n    }\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 790,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "917edbe0a528bf4e",
+        "type": "ui_template",
+        "z": "89f11fcea71eac2f",
+        "group": "testGroup",
+        "name": "答對級距+背景",
+        "order": 7,
+        "width": 21,
+        "height": 5,
+        "format": "<div style=\"text-align: center; font-size: 30px; font-weight: bold; margin-top: 20px;\">\n    <p><span style=\"color: #B22222 !important;\"> 答對級距</span></p>\n    <p><span style=\"color: blue !important;\"> 0-2 題：重度色盲~世界可能少點色彩，但依舊精彩！😎</span></p>\n    <p><span style=\"color: orange !important;\"> 3-4 題： 中度色盲~你的眼睛獨具風格，獨特美學！🎨✨</span></p>\n    <p><span style=\"color: #9400D3 !important;\"> 5-6 題： 輕度色盲~色彩感不錯，再多觀察世界！🌈😊</span></p>\n    <p><span style=\"color: gold !important;\"> 7-8 題： 正常視力~視力無敵，發現更多精彩！👀🔥</span></p>\n</div>\n<div style=\"display: none;\">\n    \n<style>\n    /* 🔹 設定背景，確保背景顯示 */\n    body {\n        background-image: url(\"https://media.tenor.com/ISYrPVY-mrUAAAAM/background.gif\");\n        background-size: cover;\n        background-position: center;\n        background-repeat: no-repeat;\n        height: 100vh;\n        width: 100vw;\n        margin: 0;\n        padding: 0;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 780,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2a2f22222222222",
+        "type": "function",
+        "z": "89f11fcea71eac2f",
+        "name": "組合 SQL 紀錄答題",
+        "func": "const data = msg.payload;\n\nmsg.topic = \"INSERT INTO color_test_log (題號, 使用者答案, 正確答案) VALUES (?, ?, ?)\";\n\nmsg.payload = [\n    data.題號,\n    data.使用者答案,\n    data.正確答案,\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "c3a3f33333333333",
+                "c4a4f44444444444"
+            ]
+        ]
+    },
+    {
+        "id": "c3a3f33333333333",
+        "type": "mysql",
+        "z": "89f11fcea71eac2f",
+        "mydb": "62091b07ae4fa80f",
+        "name": "寫入 MySQL",
+        "x": 610,
+        "y": 460,
+        "wires": [
+            [
+                "c5a5f55555555555"
+            ]
+        ]
+    },
+    {
+        "id": "c5a5f55555555555",
+        "type": "http response",
+        "z": "89f11fcea71eac2f",
+        "name": "HTTP 回應",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c4a4f44444444444",
+        "type": "debug",
+        "z": "89f11fcea71eac2f",
+        "name": "🪵 查看寫入資料",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 610,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "eba02503f28a6643",
+        "type": "debug",
+        "z": "89f11fcea71eac2f",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e83d7e123f4cbe45",
+        "type": "http request",
+        "z": "89f11fcea71eac2f",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 160,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04d2e308eb3f58d4",
+        "type": "http in",
+        "z": "89f11fcea71eac2f",
+        "name": "",
+        "url": "/color-test-log",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "c2a2f22222222222",
+                "eba02503f28a6643"
+            ]
+        ]
+    },
+    {
+        "id": "bb90a101f7ba227b",
+        "type": "ui_template",
+        "z": "06bf12c09ce88dd7",
+        "group": "e8feb21a74cd8f53",
+        "name": "影片+電視機",
+        "order": 1,
+        "width": 15,
+        "height": 11,
+        "format": "<!DOCTYPE html>\n<html lang=\"zh-TW\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Node-RED YouTube 影片</title>\n    <style>\n        /* 📺 電視機外框 */\n        .tv-container {\n            width: 720px;\n            height: 500px;\n            background: #222;\n            border-radius: 30px;\n            padding: 25px;\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            justify-content: center;\n            position: relative;\n            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);\n            margin: 40px auto;\n        }\n\n        /* 🖥 電視畫面區 */\n        .tv-screen {\n            width: 640px;\n            height: 360px;\n            border-radius: 15px;\n            overflow: hidden;\n            background: #000;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            border: 8px solid #444;\n        }\n\n        /* 📼 影片 */\n        .tv-screen iframe {\n            width: 100%;\n            height: 100%;\n            border: none;\n        }\n\n        /* 🎛 按鈕區 */\n        .button-container {\n            text-align: center;\n            margin-bottom: 15px;\n        }\n\n        /* 🎥 影片按鈕 (加大) */\n        .video-button {\n            padding: 15px 35px;\n            margin: 10px;\n            background-color: #ff5722;\n            color: white;\n            border: none;\n            border-radius: 10px;\n            cursor: pointer;\n            font-size: 22px;\n            font-weight: bold;\n            transition: 0.3s;\n        }\n\n        .video-button:hover {\n            background-color: #e64a19;\n        }\n\n        /* ❄️ 飄雪效果 */\n        #snow-container {\n            position: fixed;\n            top: 0;\n            left: 0;\n            width: 100vw;\n            height: 100vh;\n            pointer-events: none;\n            z-index: 99999;\n            overflow: hidden;\n        }\n\n        .snowflake {\n            position: absolute;\n            top: -10px;\n            background: white;\n            width: 10px;\n            height: 10px;\n            border-radius: 50%;\n            opacity: 0.8;\n            animation: fall linear infinite;\n        }\n\n        @keyframes fall {\n            0% {\n                transform: translateY(0);\n                opacity: 1;\n            }\n\n            100% {\n                transform: translateY(100vh);\n                opacity: 0;\n            }\n        }\n    </style>\n</head>\n\n<body>\n\n    <div class=\"button-container\">\n        <button class=\"video-button\" onclick=\"changeVideo('qL8Xfcfp3JU')\">色盲測試--維思維</button>\n        <button class=\"video-button\" onclick=\"changeVideo('O2QhnL-1fpY')\">滑手機造成紅綠色盲</button>\n        <button class=\"video-button\" onclick=\"changeVideo('PA0DkrB1G7A')\">色盲甜點師</button>\n    </div>\n\n    <!-- 📺 電視機 -->\n    <div class=\"tv-container\">\n        <!-- 🎥 影片畫面 -->\n        <div class=\"tv-screen\">\n            <iframe id=\"youtube-frame\" src=\"https://www.youtube.com/embed/qL8Xfcfp3JU\" allowfullscreen></iframe>\n        </div>\n    </div>\n\n    <!-- ❄️ 飄雪區域 -->\n    <div id=\"snow-container\"></div>\n\n    <script>\n        function changeVideo(videoId) {\n            document.getElementById(\"youtube-frame\").src = \"https://www.youtube.com/embed/\" + videoId;\n        }\n\n        // ❄️ 產生飄雪效果\n        function createSnowflake(position) {\n            const snowContainer = document.getElementById(\"snow-container\");\n\n            const snowflake = document.createElement(\"div\");\n            snowflake.classList.add(\"snowflake\");\n\n            // 設定雪花的位置\n            snowflake.style.left = position === \"left\" ? `${Math.random() * 50}px` : `${window.innerWidth - Math.random() * 50}px`;\n            snowflake.style.animationDuration = `${3 + Math.random() * 5}s`; // 隨機飄落時間\n            snowflake.style.width = `${5 + Math.random() * 10}px`;\n            snowflake.style.height = snowflake.style.width;\n\n            // 新增雪花到容器\n            snowContainer.appendChild(snowflake);\n\n            // 移除雪花元素\n            setTimeout(() => {\n                snowflake.remove();\n            }, 8000);\n        }\n\n        // 每 500 毫秒生成兩個雪花 (一個左側、一個右側)\n        setInterval(() => {\n            createSnowflake(\"left\");  // 左側雪花\n            createSnowflake(\"right\"); // 右側雪花\n        }, 500);\n    </script>\n\n</body>\n\n</html>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 330,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe6b59943bcf216c",
+        "type": "ui_template",
+        "z": "06bf12c09ce88dd7",
+        "group": "e8feb21a74cd8f53",
+        "name": "背景",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n/* 🌆 背景設定 */\nbody {\nbackground-image: url('https://i.pinimg.com/736x/ca/d5/66/cad566e87567c9ea8bf9a8e4c429e659.jpg');\nbackground-size: cover; /* 讓背景填滿畫面 */\nbackground-position: center;\nbackground-attachment: fixed;\nbackground-repeat: no-repeat;\noverflow: hidden; /* 防止氣球超出範圍 */\n}<style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 310,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    }
+]

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的個人資料</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    :root{
+      --bg1: rgb(200, 221, 253);   /* 淡藍 */
+      --bg2: rgb(165, 249, 187);   /* 淡綠 */
+      --bg3: rgb(251, 172, 234);   /* 淡紅/粉 */
+      --card-radius: 18px;
+      --shadow: 0 2px 16px rgba(0,0,0,0.07);
+    }
+
+    * { box-sizing: border-box; }
+    html { font-size: 16px; }
+    body{
+      margin: 0;
+      font-family: 'Segoe UI','微軟正黑體',Arial,sans-serif;
+      background: url('assets/64ffaa8061d3643b563785e95f040705.gif') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    main{
+      max-width: 1400px;
+      margin: 40px auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: nowrap;
+    }
+
+    .card{
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow);
+      padding: 28px 24px 40px; /* 底部加大 padding */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      backdrop-filter: saturate(120%) blur(0.5px);
+    }
+
+    .card.profile{
+      width: 680px;
+      max-width: 680px;
+      background: var(--bg1);
+    }
+    .card.projects{
+      width: 420px;
+      max-width: 420px;
+      background: var(--bg2);
+    }
+    .card.experiences{
+      width: 420px;
+      max-width: 420px;
+      background: var(--bg3);
+    }
+
+    /* 照片縮小 */
+    #profile-photo{
+      width: 400px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+
+    .profile-info{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1.25rem; /* 整體文字放大 */
+    }
+
+    .profile-info h1{
+      margin: 0;
+      font-size: 2.2rem;
+      color: #222;
+    }
+    .profile-info p, .profile-info a{
+      font-size: 1.25rem;
+      color: #333;
+      margin: 0;
+    }
+    .profile-info a{
+      color: #1e00ff;
+      text-decoration: underline;
+    }
+
+    .mail-row, .yt-row{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mail-icon{ width: 22px; height: 22px; }
+
+    .card h2{
+      margin: 0 0 16px 0;
+      font-size: 1.4rem;
+      color: #000105;
+      font-weight: 700;
+    }
+    .card ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .card li{ margin-bottom: 16px; } /* 項目間距加大一點 */
+
+    .card a.listlink{
+      text-decoration: none;
+      color: #222;
+      background: rgba(255,255,255,.7);
+      padding: 12px 14px;
+      border-radius: 10px;
+      transition: background .2s, transform .08s;
+      display: block;
+    }
+    .card a.listlink:hover{
+      background: rgba(255,255,255,.9);
+      transform: translateY(-1px);
+    }
+
+    footer{
+      text-align: center;
+      padding: 18px 0;
+      background: rgba(255,255,255,0.85);
+      color: #666;
+      font-size: 1rem;
+      margin-top: 40px;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+    }
+
+    @media (max-width: 1280px){
+      .card.profile{ width: 60vw; max-width: none; }
+      .card.projects, .card.experiences{ width: 32vw; max-width: none; }
+      #profile-photo{ width: 140px; }
+    }
+    @media (max-width: 900px){
+      main{
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      .card.profile,
+      .card.projects,
+      .card.experiences{
+        width: 95vw;
+        max-width: 95vw;
+      }
+      #profile-photo{ width: 50vw; }
+      .profile-info{ align-items: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card profile">
+      <img src="assets/20250912_083947.jpg" alt="陳霆嘉大頭貼" id="profile-photo">
+      <div class="profile-info">
+        <h1>陳霆嘉</h1>
+        <div class="mail-row">
+          <img src="assets/gmail_new_logo_icon_159149.png" alt="YouTube Icon" style="width:50px;height:50px;">
+          <a href="mailto:cmf3728953@gmail.com">cmf3728953@gmail.com</a>
+        </div>
+        <div class="yt-row">
+          <img src="assets/Logo_of_YouTube_(2015-2017).svg.png" alt="YouTube Icon" style="width:60px;height:30px;">
+          <a href="https://youtube.com/channel/UC5R8tdnXcVIU73lqzlBbItA" >點擊這裡</a>
+        </div>
+        <p style="font-weight:700;">中山醫學大學 醫學資訊學系四年級</p>
+      </div>
+    </section>
+
+    <section class="card projects" id="projects">
+      <h2>專案列表</h2>
+      <ul>
+        <li><a class="listlink" href="project.html">日辰資訊股份有限公司實習</a></li>
+        <li><a class="listlink" href="ai.html">人工智慧概論</a></li>
+        <li><a class="listlink" href="dev.html">軟體開發</a></li>
+        <li><a class="listlink" href="nodered.html">NODERED網頁建置（色盲輔助系統）</a></li>
+        <li><a class="listlink" href="menu.html">專題（飲食菜單推薦系統）</a></li>
+      </ul>
+    </section>
+
+    <section class="card experiences" id="experiences">
+      <h2>競賽成果或獲獎 / 研究計畫</h2>
+      <ul>
+        <li><a class="listlink" href="club.html">大學熱音社</a></li>
+        <li><a class="listlink" href="startup.html">創新創業競賽計劃書及簡報</a></li>
+        <li><a class="listlink" href="award.html">競賽成果或獲獎</a></li>
+        <li><a class="listlink" href="research.html">研究計畫</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 陳霆嘉．版權所有</p>
+  </footer>
+</body>
+</html>

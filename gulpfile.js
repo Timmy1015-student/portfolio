@@ -1,37 +1,45 @@
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
-const obfuscator = require('javascript-obfuscator'); // 注意：這裡改用核心版
-const through = require('through2'); // 用來攔截並修改檔案流
+const obfuscator = require('javascript-obfuscator');
+const through = require('through2');
 
 gulp.task('build', function() {
     return gulp.src('source/**/*.html')
-        // 第一步：暴力壓縮 HTML 與 CSS
+        // 1. HTML 與 CSS 基礎壓縮
         .pipe(htmlmin({ 
             collapseWhitespace: true, 
             removeComments: true,
             minifyCSS: true
         }))
-        // 第二步：攔截 HTML，尋找並「攪亂」裡面的 JavaScript 順序
+        // 2. 針對內嵌 JS 進行「暴力混淆」與「死代碼注入」
         .pipe(through.obj(function(file, enc, cb) {
             if (file.isBuffer()) {
                 let content = file.contents.toString();
-                // 正則表達式：抓取 <script> 標籤內的內容
                 content = content.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/g, function(match, jsCode) {
                     if (!jsCode.trim()) return match;
                     
-                    // 執行最高等級混淆：控制流扁平化 (核心打亂技術)
-                    const obfuscated = obfuscator.obfuscate(jsCode, {
-                        compact: true,
-                        controlFlowFlattening: true,       // 關鍵：將 if/else 改寫成亂序 switch
-                        controlFlowFlatteningThreshold: 1, // 100% 覆蓋打亂
-                        numbersToExpressions: true,        // 數字變算式 (1 變成 0x5a-0x59)
-                        stringArray: true,                 // 字串加密
-                        rotateStringArray: true,
-                        shuffleStringArray: true,
-                        identifierNamesGenerator: 'mangled' // 變數名縮短
-                    }).getObfuscatedCode();
-
-                    return `<script>${obfuscated}</script>`;
+                    try {
+                        const obfuscated = obfuscator.obfuscate(jsCode, {
+                            compact: true,
+                            controlFlowFlattening: true,       // 強力打亂執行順序
+                            controlFlowFlatteningThreshold: 1, // 100% 覆蓋
+                            deadCodeInjection: true,           // 注入死代碼 (干擾 AI 分析)
+                            deadCodeInjectionThreshold: 1,     // 100% 注入
+                            stringArray: true,                 // 字串加密
+                            stringArrayThreshold: 1,
+                            stringArrayEncoding: ['base64'],   // 使用 Base64 編碼字串
+                            splitStrings: true,                // 把字串切碎 (例如 "FPS" 變成 "F"+"P"+"S")
+                            splitStringsChunkLength: 3,
+                            unicodeEscapeSequence: true,       // 關鍵：將所有字符轉為 \uXXXX 碼 (AI 難以直接讀取)
+                            identifierNamesGenerator: 'hexadecimal', // 變數名全變 _0xabc123
+                            transformObjectKeys: true,         // 連物件屬性名都加密
+                            numbersToExpressions: true,        // 數字轉為運算式
+                        }).getObfuscatedCode();
+                        return `<script>${obfuscated}</script>`;
+                    } catch (e) {
+                        console.error('混淆失敗:', file.path, e);
+                        return match;
+                    }
                 });
                 file.contents = Buffer.from(content);
             }
@@ -39,7 +47,8 @@ gulp.task('build', function() {
         }))
         .pipe(gulp.dest('./docs/'))
         .on('end', () => {
-            // 複製資產
-            gulp.src('source/assets/**/*', { encoding: false }).pipe(gulp.dest('./docs/assets/'));
+            // 3. 處理 Assets (PDF、圖片)，確保 encoding 為 false
+            gulp.src('source/assets/**/*', { encoding: false })
+                .pipe(gulp.dest('./docs/assets/'));
         });
 });

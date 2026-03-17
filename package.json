@@ -1,0 +1,28 @@
+{
+  "name": "my-profile-website",
+  "version": "1.0.0",
+  "description": "Personal profile website with auto-obfuscation",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "deploy": "gulp build && git add . && git commit -m \"Auto-deploy: obfuscated version\" && git push origin main"
+  },
+  "keywords": [
+    "profile",
+    "portfolio"
+  ],
+  "author": "Chen Ting-Chia",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "typescript": "^4.1.2",
+    "vinyl-sourcemaps-apply": "^0.2.1"
+  },
+  "homepage": "https://Timmy1015-student.github.io/portfolio/"
+}

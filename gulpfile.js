@@ -1,23 +1,25 @@
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 
-// 1. 壓縮 HTML 並轉碼
+// 1. 強力壓縮任務
 gulp.task('minify-html', function() {
     return gulp.src('source/**/*.html')
         .pipe(htmlmin({ 
-            collapseWhitespace: true, 
-            removeComments: true,
-            minifyJS: true, 
-            minifyCSS: true 
+            collapseWhitespace: true,      // 壓縮成一行
+            removeComments: true,         // 移除註解
+            minifyJS: true,               // 壓縮 script 標籤
+            minifyCSS: true,              // 壓縮 style 標籤
+            collapseInlineTagWhitespace: true 
         }))
         .pipe(gulp.dest('./docs/'));
 });
 
-// 2. 自動把圖片、PDF 搬到 docs，確保網頁讀得到
+// 2. 修正後的資源複製任務 (解決 PDF/圖片不見的問題)
 gulp.task('copy-assets', function() {
+    // 抓取 source/assets 裡的所有東西，直接丟進 docs/assets
     return gulp.src('source/assets/**/*')
         .pipe(gulp.dest('./docs/assets/'));
 });
 
-// 3. 執行「build」時，同時跑上面兩個任務
+// 3. 執行 build 時，按順序跑上面兩個
 gulp.task('build', gulp.series('minify-html', 'copy-assets'));

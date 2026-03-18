@@ -1,79 +1,48 @@
-# My Profile Website
+# 👨‍💻 Chen Ting-Chia (陳霆嘉)
+### 🚀 國立中山大學 醫學科技研究所 | 中山醫學大學 醫學資訊學系
 
-This project is a personal profile website that showcases my basic information, projects, and experiences. It is built using React and TypeScript, and is designed to provide a clean and informative interface for visitors.
+---
 
-## Features
+## 📖 關於我 | About Me
+我是一位深耕於 **醫療資訊 (Medical Informatics)** 領域的開發者，熱衷於將複雜的 **醫學邏輯** 轉化為高效的 **技術實作**。身為一名 **INTJ**，我習慣系統性地解決問題，並在代碼開發中追求極致的 **精簡與效能優化**。
 
-- Display of personal information including:
-  - Name
-  - Profile photo
-  - Email
-  - YouTube channel link
-  - University information
-- List of projects with detailed links
-- List of experiences with detailed links
+* **專業背景**：主修醫療資訊，擅長跨領域技術整合。
+* **實習經歷**：曾於 **日辰資訊 (Richer Information)** 關鍵技術部實習，專攻 **RPA 全自動腳本開發**，具備企業級自動化解決方案實務經驗。
+* **學術專案**：主導開發 AI 驅動飲食系統 **「得來 FOOD」**，致力於智慧醫療與健康管理的應用。
 
-## Project Structure
+---
 
-```
-my-profile-website
-├── public
-│   ├── index.html         # Main HTML file for the website
-│   └── favicon.ico        # Website icon
-├── src
-│   ├── assets
-│   │   └── profile-photo.svg  # Profile photo asset
-│   ├── components
-│   │   ├── Header.tsx         # Component for the header section
-│   │   ├── ProjectList.tsx     # Component for displaying project list
-│   │   └── ExperienceList.tsx   # Component for displaying experience list
-│   ├── pages
-│   │   └── Home.tsx           # Home page component
-│   ├── data
-│   │   ├── projects.ts         # Data file for projects
-│   │   └── experiences.ts      # Data file for experiences
-│   └── types
-│       └── index.ts           # Type definitions for projects and experiences
-├── package.json               # NPM configuration file
-├── tsconfig.json              # TypeScript configuration file
-└── README.md                  # Project documentation
-```
+## 🛠️ 技術工具箱 | Tech Stack
 
-## Getting Started
+### 💻 **程式語言**
+- **Python** (數據處理、AI 應用)
+- **C++** (演算法邏輯、CPE 檢定)
+- **JavaScript** (前端互動開發)
 
-To run this project locally, follow these steps:
+### ⚙️ **自動化與建置工具**
+- **RPA** (Automation Anywhere / UiPath 企業應用)
+- **Gulp.js** (自動化工作流、代碼處理)
+- **Node.js** (後端環境與工具開發)
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
+### 🛠️ **開發與版本控制**
+- **Git** / **GitHub Pipeline** (版本管理與自動化部署)
 
-2. Navigate to the project directory:
-   ```
-   cd my-profile-website
-   ```
+---
 
-3. Install the dependencies:
-   ```
-   npm install
-   ```
+## 🎸 斜槓生活 | Passion & Life
 
-4. Start the development server:
-   ```
-   npm start
-   ```
+* **🎤 音樂與領導**：曾任大學 **熱音社主唱** 長達兩年，擁有豐富的團隊協作與大型活動籌劃經驗。
+* **🎬 內容創作**：經營 YouTube 頻道 **[Vickers.嘎嘎]**，分享資訊技術專案與遊戲開發內容。
+* **🎲 興趣嗜好**：熱衷於 **日式麻將** 邏輯博弈、**歌唱**、**程式開發** 以及 **影集追劇**。
 
-## Deployment
+---
 
-This project can be deployed on GitHub Pages or any other hosting service. For GitHub Pages, you can follow these steps:
+## 📫 聯絡資訊 | Contact Info
 
-1. Build the project:
-   ```
-   npm run build
-   ```
+* **Email**: [cmf.3728953@gmail.com](mailto:cmf.3728953@gmail.com)
+* **LinkedIn**: [陳霆嘉 Timmy](https://www.linkedin.com/in/timmy1015portfolio)
+* **YouTube**: [Vickers.嘎嘎](https://youtube.com/channel/UC5R8tdnXcVIU73lqzlBbItA?si=dUClJoak1pZo7FL7)
 
-2. Deploy the `build` folder to GitHub Pages.
+---
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+> *"Systematic thinking leads to efficient solutions."*
